@@ -1,0 +1,60 @@
+<!doctype html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css" integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8=" crossorigin="anonymous"> 
+   <link rel="stylesheet" type="text/css" href="./app.css">
+</head>
+<body>
+
+    <header class="header">
+        Fanny Benoist's Assignment 
+      </header>
+
+    <main class="search-container">
+      <div class="search-panel">
+        <div class="left-panel">
+            <div id="clear-refinements"></div>
+            <h1>States</h1>
+            <div id="state"></div>
+            <h1>Cities</h1>
+            <div id="city"></div>
+            <h1>Companies</h1>
+            <div id="company"></div>
+            <h1>Numbers of followers</h1>
+            <div id="followers"></div>
+        </div>
+        <div class="right-panel">
+            <div id="searchbox"></div>
+            <div id="stats"></div>
+            <div id="hits"></div>
+        </div>
+      </div>  
+    </main>
+
+
+  <script type="text/html" id="hit-template">
+    <div class="hit">
+        <div class="hit-content">
+          <div>
+            <div class="hit-name">
+                {{#helpers.highlight}}{ "attribute": "firstname" }{{/helpers.highlight}}
+                {{#helpers.highlight}}{ "attribute": "lastname" }{{/helpers.highlight}}
+            </div>
+            <div class="hit-company">
+                {{#helpers.highlight}}{ "attribute": "company" }{{/helpers.highlight}}
+            </div>
+          </div>
+        </div>
+      </div>
+  </script>
+
+  <footer>
+    <div id="hits-per-page"></div>
+    <div id="pagination"></div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js" integrity="sha256-LAGhRRdtVoD6RLo2qDQsU2mp+XVSciKRC8XPOBWmofM=" crossorigin="anonymous"></script>
+  <script src="./app.js"></script>
+</body>
