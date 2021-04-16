@@ -2,7 +2,7 @@
 const algoliasearch = require('algoliasearch');
 
 // Replace by your value
-const app_id = '*****7K';
+const app_id = '*****';
 const admin_api_key = '*****';
 
 // Create an instance
@@ -49,3 +49,5 @@ index.setSettings({
 }).then(() => {
   // done
 });
+
+

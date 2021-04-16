@@ -1,7 +1,7 @@
 
 // Replace with your own values
-const app_id = 'XR3Z76W57K';
-const search_only_api_key = '5bb639aca05aa1c8aedfd5ea24fac046'; // search only API key, not admin API key
+const app_id = '*******';
+const search_only_api_key = '**********'; // search only API key, not admin API key
 
 const searchClient = algoliasearch(
   app_id,
