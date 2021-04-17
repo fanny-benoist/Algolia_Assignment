@@ -2,8 +2,8 @@
 const algoliasearch = require('algoliasearch');
 
 // Replace by your value
-const app_id = '*****';
-const admin_api_key = '*****';
+const app_id = '***********';
+const admin_api_key = '**********';
 
 // Create an instance
 const client = algoliasearch(
@@ -25,21 +25,15 @@ index.saveObjects(contactsJSON, {
 // Configure
 index.setSettings({
   'customRanking': ['desc(followers)']
-}).then(() => {
-  // done
-});
-
-index.setSettings({
+},
+{
   searchableAttributes: [
-    'lastname',
-    'firstname',
+    'unordered(lastname)',
+    'unordered(firstname)',
     'company'
     ]
-}).then(() => {
-  // done
-});
-
-index.setSettings({
+},
+{
   attributesForFaceting: [
       'searchable(city)',
       'searchable(state)',
@@ -49,5 +43,4 @@ index.setSettings({
 }).then(() => {
   // done
 });
-
 
